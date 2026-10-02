@@ -1,0 +1,24 @@
+# Secretos: NUNCA subir la API key
+.env
+
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Editor / sistema operativo
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# PE7: envios simulados y salidas de los tests
+logs/envios/
+logs/tests/
