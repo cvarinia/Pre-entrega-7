@@ -1,0 +1,39 @@
+# PE7 - servicios de infraestructura: Redis + Arize Phoenix.
+# La API y el worker se corren en tu maquina (por ahora).
+#
+# Levantar:  docker compose up -d
+# Estado:    docker compose ps
+# Apagar:    docker compose down        (los datos quedan en los volumenes)
+
+services:
+  redis:
+    # Redis 8 trae incluidos los modulos de busqueda y JSON que necesita el
+    # checkpointer de LangGraph. Un Redis 7 "pelado" NO sirve.
+    image: redis:8
+    container_name: pe7-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-datos:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  phoenix:
+    # Version fijada a proposito (la misma con la que se probo el script de
+    # carga): "latest" cambiaria sola y podria romper la consulta de metricas.
+    image: arizephoenix/phoenix:version-20.19.0
+    container_name: pe7-phoenix
+    ports:
+      - "6006:6006"   # dashboard + recepcion de trazas por HTTP (/v1/traces)
+      - "4317:4317"   # recepcion de trazas por gRPC (no se usa, queda disponible)
+    environment:
+      - PHOENIX_WORKING_DIR=/mnt/data
+    volumes:
+      - phoenix-datos:/mnt/data   # las trazas sobreviven a un reinicio
+
+volumes:
+  redis-datos:
+  phoenix-datos:

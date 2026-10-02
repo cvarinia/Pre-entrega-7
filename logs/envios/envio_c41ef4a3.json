@@ -1,0 +1,85 @@
+{
+  "envio_id": "c41ef4a3",
+  "destino": "Almacen del barrio (simulado)",
+  "cantidad_de_items": 10,
+  "archivo": "logs\\envios\\envio_c41ef4a3.json",
+  "enviado_en": "2026-10-02T13:43:47",
+  "aprobado_por": "Car",
+  "lista": {
+    "comensales": 6,
+    "cantidad_de_items": 10,
+    "items": [
+      {
+        "ingrediente": "aceite de oliva",
+        "se_usa_en": [
+          "Tortilla de papas",
+          "Sopa de calabaza y jengibre"
+        ]
+      },
+      {
+        "ingrediente": "calabaza",
+        "se_usa_en": [
+          "Sopa de calabaza y jengibre"
+        ]
+      },
+      {
+        "ingrediente": "caldo de verduras",
+        "se_usa_en": [
+          "Sopa de calabaza y jengibre"
+        ]
+      },
+      {
+        "ingrediente": "cebolla",
+        "se_usa_en": [
+          "Tortilla de papas",
+          "Sopa de calabaza y jengibre"
+        ]
+      },
+      {
+        "ingrediente": "harina",
+        "se_usa_en": [
+          "Noquis de papa"
+        ]
+      },
+      {
+        "ingrediente": "huevo",
+        "se_usa_en": [
+          "Noquis de papa",
+          "Tortilla de papas"
+        ]
+      },
+      {
+        "ingrediente": "jengibre",
+        "se_usa_en": [
+          "Sopa de calabaza y jengibre"
+        ]
+      },
+      {
+        "ingrediente": "papa",
+        "se_usa_en": [
+          "Noquis de papa",
+          "Tortilla de papas"
+        ]
+      },
+      {
+        "ingrediente": "sal",
+        "se_usa_en": [
+          "Noquis de papa",
+          "Tortilla de papas"
+        ]
+      },
+      {
+        "ingrediente": "salsa de tomate",
+        "se_usa_en": [
+          "Noquis de papa"
+        ]
+      }
+    ],
+    "factor_de_escala_por_receta": {
+      "Noquis de papa": 1.5,
+      "Tortilla de papas": 1.5,
+      "Sopa de calabaza y jengibre": 1.5
+    },
+    "inexistentes": []
+  }
+}

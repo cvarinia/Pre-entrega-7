@@ -1,0 +1,61 @@
+{
+  "etiqueta": "carga-20261002-134715",
+  "total_s": 27.2,
+  "jobs": [
+    {
+      "job_id": "96d749c218ef4e9bbb17dd3e554dea07",
+      "pedido": "Armame 3 cenas vegetarianas para 6 personas, con las calorias y la lista de compras.",
+      "estado": "DONE",
+      "error": null,
+      "ms_respuesta_post": 411.8,
+      "duracion_grafo_s": 22.75,
+      "duracion_cliente_s": 24.7
+    },
+    {
+      "job_id": "05121fff747845608ad8d230f14986b4",
+      "pedido": "Necesito 2 platos sin gluten para 4 personas, con calorias por porcion y lista de compras.",
+      "estado": "DONE",
+      "error": null,
+      "ms_respuesta_post": 402.3,
+      "duracion_grafo_s": 21.22,
+      "duracion_cliente_s": 22.6
+    },
+    {
+      "job_id": "97b7520c894b4464885f6cc1895e209c",
+      "pedido": "Proponeme 3 recetas sin lacteos para 8 personas y calcula las calorias totales.",
+      "estado": "DONE",
+      "error": null,
+      "ms_respuesta_post": 388.9,
+      "duracion_grafo_s": 21.63,
+      "duracion_cliente_s": 22.6
+    },
+    {
+      "job_id": "8e49177e170f41c2ade708f2866b2b15",
+      "pedido": "Quiero 2 recetas veganas para 4 personas, con la lista de compras.",
+      "estado": "DONE",
+      "error": null,
+      "ms_respuesta_post": 398.0,
+      "duracion_grafo_s": 21.35,
+      "duracion_cliente_s": 22.6
+    },
+    {
+      "job_id": "1cb63262035c40ac83044a982ef80e4a",
+      "pedido": "Buscame 3 recetas sin gluten y sin lacteos para 5 personas y arma la lista de compras.",
+      "estado": "DONE",
+      "error": null,
+      "ms_respuesta_post": 395.1,
+      "duracion_grafo_s": 24.86,
+      "duracion_cliente_s": 26.6
+    }
+  ],
+  "phoenix": {
+    "filtro_en_phoenix": "metadata['etiqueta'] == 'carga-20261002-134715'",
+    "trazas": 5,
+    "costo_total_usd": 0.15727,
+    "costo_por_ejecucion_usd": 0.031453999999999996,
+    "tokens_entrada": 100750.0,
+    "tokens_salida": 11304.0,
+    "latencia_p50_s": 21.628647,
+    "latencia_p95_s": 24.422553800000003
+  }
+}

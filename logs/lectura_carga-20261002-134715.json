@@ -1,0 +1,39 @@
+{
+  "etiqueta": "carga-20261002-134715",
+  "trazas": 5,
+  "latencia_total_ms": 111716.419,
+  "nodos": {
+    "supervisor": {
+      "ejecuciones": 15,
+      "latencia_ms": 32660.826999999997,
+      "llamadas_llm": 15,
+      "tokens_entrada": 29272.0,
+      "tokens_salida": 2698.0,
+      "costo_usd": 0.042762
+    },
+    "investigador": {
+      "ejecuciones": 5,
+      "latencia_ms": 29546.252,
+      "llamadas_llm": 15,
+      "tokens_entrada": 41410.0,
+      "tokens_salida": 2665.0,
+      "costo_usd": 0.054735
+    },
+    "analista": {
+      "ejecuciones": 5,
+      "latencia_ms": 30818.067000000003,
+      "llamadas_llm": 10,
+      "tokens_entrada": 21598.0,
+      "tokens_salida": 3359.0,
+      "costo_usd": 0.038393
+    },
+    "sintesis": {
+      "ejecuciones": 5,
+      "latencia_ms": 18326.177,
+      "llamadas_llm": 5,
+      "tokens_entrada": 8470.0,
+      "tokens_salida": 2582.0,
+      "costo_usd": 0.02138
+    }
+  }
+}

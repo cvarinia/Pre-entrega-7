@@ -1,0 +1,443 @@
+{
+  "pedido": "Armame 3 cenas vegetarianas para 6 personas y mandale la lista de compras al almacén",
+  "proveedor": "anthropic",
+  "modelo": "claude-haiku-4-5-20251001",
+  "duracion_segundos": 50.4,
+  "task_completed": true,
+  "motivo_cierre": "Rubrica cumplida y chequeos automaticos OK.",
+  "recorrido": [
+    "investigador",
+    "analista",
+    "FINALIZAR"
+  ],
+  "decisiones_supervisor": [
+    {
+      "evaluacion": "No hay selección de recetas aún. El investigador debe buscar 3 cenas vegetarianas para 6 personas.",
+      "siguiente": "investigador",
+      "instruccion": "Busca 3 recetas de cenas vegetarianas en la base de datos. Requisitos: deben ser cenas (no postres, no almuerzos), vegetarianas (sin carne ni pescado), para 6 personas. Entrega los IDs de las 3 recetas seleccionadas.",
+      "solicita_envio": false,
+      "ronda": 1,
+      "forzada": false
+    },
+    {
+      "evaluacion": "La selección del investigador es correcta: 3 cenas vegetarianas para 6 personas (noquis, sopa y pizza). Falta el análisis del analista: no hay cálculo de calorías ni lista de compras.",
+      "siguiente": "analista",
+      "instruccion": "Procesa las 3 recetas seleccionadas (r008, r017, r018) para 6 personas: noquis de papa, sopa de calabaza y jengibre, y pizza casera de muzzarella. Verifica que todas sean vegetarianas (sin restricciones adicionales mencionadas), calcula calorías totales y por porción, y arma la lista de compras completa con cantidades para 6 comensales.",
+      "solicita_envio": false,
+      "ronda": 2,
+      "forzada": false
+    },
+    {
+      "evaluacion": "Se cumple todo: 3 cenas vegetarianas seleccionadas correctamente, análisis completo con calorías y lista de compras de 14 items, todos los chequeos automáticos en OK. La persona pidió explícitamente que se MANDE la lista al almacén.",
+      "siguiente": "FINALIZAR",
+      "instruccion": "",
+      "solicita_envio": true,
+      "ronda": 3,
+      "forzada": false
+    }
+  ],
+  "aportes": [
+    {
+      "agente": "investigador",
+      "ronda": 1,
+      "instruccion": "Busca 3 recetas de cenas vegetarianas en la base de datos. Requisitos: deben ser cenas (no postres, no almuerzos), vegetarianas (sin carne ni pescado), para 6 personas. Entrega los IDs de las 3 recetas seleccionadas.",
+      "resumen": "Listo. Elegí **r008, r017 y r018**: noquis de papa, sopa de calabaza y jengibre, y pizza casera de muzzarella. Todas son cenas vegetarianas que se pueden adaptar para 6 personas.",
+      "receta_ids": [
+        "r008",
+        "r017",
+        "r018"
+      ],
+      "evidencia": [
+        {
+          "herramienta": "buscar_recetas_por_etiqueta",
+          "argumentos": {
+            "etiqueta": "vegetariana",
+            "max_resultados": 10
+          },
+          "resultado": {
+            "cantidad": 7,
+            "recetas": [
+              {
+                "id": "r008",
+                "nombre": "Noquis de papa",
+                "ingredientes": [
+                  "papa",
+                  "harina",
+                  "huevo",
+                  "sal",
+                  "salsa de tomate"
+                ],
+                "porciones_base": 4,
+                "calorias_por_porcion": 450,
+                "tiempo_minutos": 80,
+                "etiquetas": [
+                  "contiene_gluten",
+                  "vegetariana",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r009",
+                "nombre": "Tortilla de papas",
+                "ingredientes": [
+                  "papa",
+                  "huevo",
+                  "cebolla",
+                  "aceite de oliva",
+                  "sal"
+                ],
+                "porciones_base": 4,
+                "calorias_por_porcion": 330,
+                "tiempo_minutos": 35,
+                "etiquetas": [
+                  "sin_gluten",
+                  "sin_lacteos",
+                  "vegetariana"
+                ]
+              },
+              {
+                "id": "r011",
+                "nombre": "Ensalada de quinoa y palta",
+                "ingredientes": [
+                  "quinoa",
+                  "tomate",
+                  "pepino",
+                  "palta",
+                  "limon",
+                  "aceite de oliva"
+                ],
+                "porciones_base": 2,
+                "calorias_por_porcion": 290,
+                "tiempo_minutos": 25,
+                "etiquetas": [
+                  "vegana",
+                  "sin_gluten",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r012",
+                "nombre": "Budin de zanahoria",
+                "ingredientes": [
+                  "zanahoria",
+                  "harina",
+                  "azucar",
+                  "huevo",
+                  "aceite",
+                  "nuez"
+                ],
+                "porciones_base": 8,
+                "calorias_por_porcion": 310,
+                "tiempo_minutos": 65,
+                "etiquetas": [
+                  "contiene_gluten",
+                  "vegetariana",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r016",
+                "nombre": "Flan casero con dulce de leche",
+                "ingredientes": [
+                  "huevo",
+                  "leche",
+                  "azucar",
+                  "esencia de vainilla",
+                  "dulce de leche"
+                ],
+                "porciones_base": 6,
+                "calorias_por_porcion": 250,
+                "tiempo_minutos": 90,
+                "etiquetas": [
+                  "contiene_lacteos",
+                  "sin_gluten",
+                  "vegetariana"
+                ]
+              },
+              {
+                "id": "r017",
+                "nombre": "Sopa de calabaza y jengibre",
+                "ingredientes": [
+                  "calabaza",
+                  "jengibre",
+                  "cebolla",
+                  "caldo de verduras",
+                  "aceite de oliva"
+                ],
+                "porciones_base": 4,
+                "calorias_por_porcion": 180,
+                "tiempo_minutos": 40,
+                "etiquetas": [
+                  "vegana",
+                  "sin_gluten",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r018",
+                "nombre": "Pizza casera de muzzarella",
+                "ingredientes": [
+                  "harina",
+                  "levadura",
+                  "salsa de tomate",
+                  "queso mozzarella",
+                  "aceituna",
+                  "oregano"
+                ],
+                "porciones_base": 8,
+                "calorias_por_porcion": 290,
+                "tiempo_minutos": 120,
+                "etiquetas": [
+                  "contiene_lacteos",
+                  "contiene_gluten",
+                  "vegetariana"
+                ]
+              }
+            ]
+          },
+          "error": null
+        },
+        {
+          "herramienta": "entregar_seleccion",
+          "argumentos": {
+            "receta_ids": [
+              "r008",
+              "r017",
+              "r018"
+            ],
+            "justificacion": "Tres cenas vegetarianas: noquis de papa, sopa de calabaza y jengibre, y pizza casera de muzzarella. Todas son platos principales aptos para cena, sin carne ni pescado, y pueden escalarse para 6 personas."
+          },
+          "resultado": {
+            "aceptada": true,
+            "seleccion": [
+              {
+                "id": "r008",
+                "nombre": "Noquis de papa",
+                "etiquetas": [
+                  "contiene_gluten",
+                  "vegetariana",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r017",
+                "nombre": "Sopa de calabaza y jengibre",
+                "etiquetas": [
+                  "vegana",
+                  "sin_gluten",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r018",
+                "nombre": "Pizza casera de muzzarella",
+                "etiquetas": [
+                  "contiene_lacteos",
+                  "contiene_gluten",
+                  "vegetariana"
+                ]
+              }
+            ],
+            "justificacion": "Tres cenas vegetarianas: noquis de papa, sopa de calabaza y jengibre, y pizza casera de muzzarella. Todas son platos principales aptos para cena, sin carne ni pescado, y pueden escalarse para 6 personas."
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "agente": "analista",
+      "ronda": 2,
+      "instruccion": "Procesa las 3 recetas seleccionadas (r008, r017, r018) para 6 personas: noquis de papa, sopa de calabaza y jengibre, y pizza casera de muzzarella. Verifica que todas sean vegetarianas (sin restricciones adicionales mencionadas), calcula calorías totales y por porción, y arma la lista de compras completa con cantidades para 6 comensales.",
+      "resumen": "Perfecto, acá está el análisis completo:\n\n**✓ Verificación de restricciones:** Las 3 recetas cumplen con ser vegetarianas.\n\n**Calorías del menú:**\n- **Total para 6 personas:** 5.520 calorías\n- **Por comensal:** 920 calorías\n\nDesglose por plato:\n- Noquis de papa: 2.700 cal (450 por porción)\n- Sopa de calabaza y jengibre: 1.080 cal (180 por porción)\n- Pizza casera de muzzarella: 1.740 cal (290 por porción)\n\n**Lista de compras (14 ingredientes):**\n1. Papa (para noquis - factor 1.5x)\n2. Huevo (para noquis - factor 1.5x)\n3. Harina (para noquis y pizza - factores 1.5x y 0.75x)\n4. Sal (para noquis - factor 1.5x)\n5. Salsa de tomate (para noquis y pizza - factores 1.5x y 0.75x)\n6. Calabaza (para sopa - factor 1.5x)\n7. Cebolla (para sopa - factor 1.5x)\n8. Jengibre (para sopa - factor 1.5x)\n9. Caldo de verduras (para sopa - factor 1.5x)\n10. Aceite de oliva (para sopa - factor 1.5x)\n11. Queso mozzarella (para pizza - factor 0.75x)\n12. Levadura (para pizza - factor 0.75x)\n13. Orégano (para pizza - factor 0.75x)\n14. Aceituna (para pizza - factor 0.75x)\n\nTodo listo para cocinar para 6 personas. 🍽️",
+      "receta_ids": [
+        "r008",
+        "r017",
+        "r018"
+      ],
+      "evidencia": [
+        {
+          "herramienta": "verificar_etiquetas",
+          "argumentos": {
+            "receta_ids": [
+              "r008",
+              "r017",
+              "r018"
+            ],
+            "etiqueta_requerida": "vegetariana"
+          },
+          "resultado": {
+            "etiqueta_requerida": "vegetariana",
+            "todas_cumplen": true,
+            "cumplen": [
+              "r008",
+              "r017",
+              "r018"
+            ],
+            "no_cumplen": [],
+            "inexistentes": []
+          },
+          "error": null
+        },
+        {
+          "herramienta": "calcular_nutricion_menu",
+          "argumentos": {
+            "receta_ids": [
+              "r008",
+              "r017",
+              "r018"
+            ],
+            "comensales": 6
+          },
+          "resultado": {
+            "comensales": 6,
+            "detalle": [
+              {
+                "id": "r008",
+                "nombre": "Noquis de papa",
+                "calorias_por_porcion": 450,
+                "factor_de_escala": 1.5,
+                "calorias_para_el_grupo": 2700
+              },
+              {
+                "id": "r017",
+                "nombre": "Sopa de calabaza y jengibre",
+                "calorias_por_porcion": 180,
+                "factor_de_escala": 1.5,
+                "calorias_para_el_grupo": 1080
+              },
+              {
+                "id": "r018",
+                "nombre": "Pizza casera de muzzarella",
+                "calorias_por_porcion": 290,
+                "factor_de_escala": 0.75,
+                "calorias_para_el_grupo": 1740
+              }
+            ],
+            "calorias_totales_menu": 5520,
+            "calorias_por_comensal": 920,
+            "advertencias": []
+          },
+          "error": null
+        },
+        {
+          "herramienta": "consolidar_lista_compras",
+          "argumentos": {
+            "receta_ids": [
+              "r008",
+              "r017",
+              "r018"
+            ],
+            "comensales": 6
+          },
+          "resultado": {
+            "comensales": 6,
+            "cantidad_de_items": 14,
+            "items": [
+              {
+                "ingrediente": "aceite de oliva",
+                "se_usa_en": [
+                  "Sopa de calabaza y jengibre"
+                ]
+              },
+              {
+                "ingrediente": "aceituna",
+                "se_usa_en": [
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "calabaza",
+                "se_usa_en": [
+                  "Sopa de calabaza y jengibre"
+                ]
+              },
+              {
+                "ingrediente": "caldo de verduras",
+                "se_usa_en": [
+                  "Sopa de calabaza y jengibre"
+                ]
+              },
+              {
+                "ingrediente": "cebolla",
+                "se_usa_en": [
+                  "Sopa de calabaza y jengibre"
+                ]
+              },
+              {
+                "ingrediente": "harina",
+                "se_usa_en": [
+                  "Noquis de papa",
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "huevo",
+                "se_usa_en": [
+                  "Noquis de papa"
+                ]
+              },
+              {
+                "ingrediente": "jengibre",
+                "se_usa_en": [
+                  "Sopa de calabaza y jengibre"
+                ]
+              },
+              {
+                "ingrediente": "levadura",
+                "se_usa_en": [
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "oregano",
+                "se_usa_en": [
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "papa",
+                "se_usa_en": [
+                  "Noquis de papa"
+                ]
+              },
+              {
+                "ingrediente": "queso mozzarella",
+                "se_usa_en": [
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "sal",
+                "se_usa_en": [
+                  "Noquis de papa"
+                ]
+              },
+              {
+                "ingrediente": "salsa de tomate",
+                "se_usa_en": [
+                  "Noquis de papa",
+                  "Pizza casera de muzzarella"
+                ]
+              }
+            ],
+            "factor_de_escala_por_receta": {
+              "Noquis de papa": 1.5,
+              "Sopa de calabaza y jengibre": 1.5,
+              "Pizza casera de muzzarella": 0.75
+            },
+            "inexistentes": []
+          },
+          "error": null
+        }
+      ]
+    }
+  ],
+  "respuesta_final": "# RESUMEN DE TU PEDIDO\n\n## Las 3 cenas vegetarianas para 6 personas:\n\n1. **Noquis de papa** (factor de escala: 1.5)\n2. **Sopa de calabaza y jengibre** (factor de escala: 1.5)\n3. **Pizza casera de muzzarella** (factor de escala: 0.75)\n\n---\n\n## Información nutricional del menú:\n\n- **Total de calorías:** 5.520 kcal\n- **Calorías por persona:** 920 kcal\n\n---\n\n## Lista de compras:\n\n| Ingrediente | Se usa en | Factor de escala |\n|---|---|---|\n| Aceite de oliva | Sopa de calabaza y jengibre | 1.5 |\n| Aceituna | Pizza casera de muzzarella | 0.75 |\n| Calabaza | Sopa de calabaza y jengibre | 1.5 |\n| Caldo de verduras | Sopa de calabaza y jengibre | 1.5 |\n| Cebolla | Sopa de calabaza y jengibre | 1.5 |\n| Harina | Noquis de papa, Pizza casera de muzzarella | 1.5 / 0.75 |\n| Huevo | Noquis de papa | 1.5 |\n| Jengibre | Sopa de calabaza y jengibre | 1.5 |\n| Levadura | Pizza casera de muzzarella | 0.75 |\n| Orégano | Pizza casera de muzzarella | 0.75 |\n| Papa | Noquis de papa | 1.5 |\n| Queso mozzarella | Pizza casera de muzzarella | 0.75 |\n| Sal | Noquis de papa | 1.5 |\n| Salsa de tomate | Noquis de papa, Pizza casera de muzzarella | 1.5 / 0.75 |\n\n---\n\n**ESTADO DEL ENVÍO:** Envío **RECHAZADO** — La lista de compras no se envió al almacén porque no te alcanza el presupuesto hoy.",
+  "solicita_envio": true,
+  "decision_envio": {
+    "aprobado": false,
+    "revisor": "cli",
+    "comentario": "No me alcanza el presupuesto hoy"
+  },
+  "envio": null
+}

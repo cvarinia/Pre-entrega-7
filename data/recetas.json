@@ -1,0 +1,167 @@
+{
+  "_comentario": "Base de datos SIMULADA de recetas. Reemplazable por un corpus real sin tocar el resto del proyecto: solo cambia repositorio.py.",
+  "recetas": [
+    {
+      "id": "r001",
+      "nombre": "Milanesas de pollo al horno",
+      "ingredientes": ["pollo", "pan rallado", "huevo", "ajo", "perejil", "aceite de oliva"],
+      "porciones_base": 4,
+      "calorias_por_porcion": 420,
+      "tiempo_minutos": 45,
+      "etiquetas": ["contiene_gluten", "sin_lacteos"]
+    },
+    {
+      "id": "r002",
+      "nombre": "Pollo al verdeo",
+      "ingredientes": ["pollo", "cebolla de verdeo", "crema de leche", "vino blanco", "manteca"],
+      "porciones_base": 4,
+      "calorias_por_porcion": 510,
+      "tiempo_minutos": 40,
+      "etiquetas": ["contiene_lacteos", "sin_gluten"]
+    },
+    {
+      "id": "r003",
+      "nombre": "Tarta de pollo y choclo",
+      "ingredientes": ["pollo", "choclo", "masa de tarta", "queso cremoso", "crema de leche", "cebolla"],
+      "porciones_base": 6,
+      "calorias_por_porcion": 380,
+      "tiempo_minutos": 60,
+      "etiquetas": ["contiene_lacteos", "contiene_gluten"]
+    },
+    {
+      "id": "r004",
+      "nombre": "Pollo al limon con papas al romero",
+      "ingredientes": ["pollo", "limon", "papa", "romero", "ajo", "aceite de oliva"],
+      "porciones_base": 4,
+      "calorias_por_porcion": 350,
+      "tiempo_minutos": 55,
+      "etiquetas": ["sin_lacteos", "sin_gluten"]
+    },
+    {
+      "id": "r005",
+      "nombre": "Guiso de lentejas",
+      "ingredientes": ["lentejas", "chorizo colorado", "zanahoria", "papa", "cebolla", "pimenton"],
+      "porciones_base": 6,
+      "calorias_por_porcion": 400,
+      "tiempo_minutos": 70,
+      "etiquetas": ["sin_lacteos", "sin_gluten"]
+    },
+    {
+      "id": "r006",
+      "nombre": "Empanadas de carne al horno",
+      "ingredientes": ["carne picada", "cebolla", "huevo duro", "aceituna", "tapas de empanada", "comino"],
+      "porciones_base": 12,
+      "calorias_por_porcion": 260,
+      "tiempo_minutos": 75,
+      "etiquetas": ["contiene_gluten", "sin_lacteos"]
+    },
+    {
+      "id": "r007",
+      "nombre": "Milanesa napolitana",
+      "ingredientes": ["carne", "pan rallado", "huevo", "jamon", "queso mozzarella", "salsa de tomate"],
+      "porciones_base": 4,
+      "calorias_por_porcion": 620,
+      "tiempo_minutos": 50,
+      "etiquetas": ["contiene_lacteos", "contiene_gluten"]
+    },
+    {
+      "id": "r008",
+      "nombre": "Noquis de papa",
+      "ingredientes": ["papa", "harina", "huevo", "sal", "salsa de tomate"],
+      "porciones_base": 4,
+      "calorias_por_porcion": 450,
+      "tiempo_minutos": 80,
+      "etiquetas": ["contiene_gluten", "vegetariana", "sin_lacteos"]
+    },
+    {
+      "id": "r009",
+      "nombre": "Tortilla de papas",
+      "ingredientes": ["papa", "huevo", "cebolla", "aceite de oliva", "sal"],
+      "porciones_base": 4,
+      "calorias_por_porcion": 330,
+      "tiempo_minutos": 35,
+      "etiquetas": ["sin_gluten", "sin_lacteos", "vegetariana"]
+    },
+    {
+      "id": "r010",
+      "nombre": "Locro criollo",
+      "ingredientes": ["maiz blanco", "zapallo", "chorizo colorado", "panceta", "porotos", "cebolla de verdeo"],
+      "porciones_base": 8,
+      "calorias_por_porcion": 560,
+      "tiempo_minutos": 180,
+      "etiquetas": ["sin_lacteos", "sin_gluten"]
+    },
+    {
+      "id": "r011",
+      "nombre": "Ensalada de quinoa y palta",
+      "ingredientes": ["quinoa", "tomate", "pepino", "palta", "limon", "aceite de oliva"],
+      "porciones_base": 2,
+      "calorias_por_porcion": 290,
+      "tiempo_minutos": 25,
+      "etiquetas": ["vegana", "sin_gluten", "sin_lacteos"]
+    },
+    {
+      "id": "r012",
+      "nombre": "Budin de zanahoria",
+      "ingredientes": ["zanahoria", "harina", "azucar", "huevo", "aceite", "nuez"],
+      "porciones_base": 8,
+      "calorias_por_porcion": 310,
+      "tiempo_minutos": 65,
+      "etiquetas": ["contiene_gluten", "vegetariana", "sin_lacteos"]
+    },
+    {
+      "id": "r013",
+      "nombre": "Zapallitos rellenos",
+      "ingredientes": ["zapallito", "carne picada", "arroz", "queso rallado", "cebolla"],
+      "porciones_base": 4,
+      "calorias_por_porcion": 340,
+      "tiempo_minutos": 60,
+      "etiquetas": ["contiene_lacteos", "sin_gluten"]
+    },
+    {
+      "id": "r014",
+      "nombre": "Pastel de papas",
+      "ingredientes": ["papa", "carne picada", "manteca", "leche", "cebolla", "huevo duro"],
+      "porciones_base": 6,
+      "calorias_por_porcion": 480,
+      "tiempo_minutos": 75,
+      "etiquetas": ["contiene_lacteos", "sin_gluten"]
+    },
+    {
+      "id": "r015",
+      "nombre": "Wok de pollo y vegetales",
+      "ingredientes": ["pollo", "brocoli", "zanahoria", "salsa de soja", "jengibre", "aceite de sesamo"],
+      "porciones_base": 3,
+      "calorias_por_porcion": 320,
+      "tiempo_minutos": 30,
+      "etiquetas": ["sin_lacteos", "contiene_gluten"]
+    },
+    {
+      "id": "r016",
+      "nombre": "Flan casero con dulce de leche",
+      "ingredientes": ["huevo", "leche", "azucar", "esencia de vainilla", "dulce de leche"],
+      "porciones_base": 6,
+      "calorias_por_porcion": 250,
+      "tiempo_minutos": 90,
+      "etiquetas": ["contiene_lacteos", "sin_gluten", "vegetariana"]
+    },
+    {
+      "id": "r017",
+      "nombre": "Sopa de calabaza y jengibre",
+      "ingredientes": ["calabaza", "jengibre", "cebolla", "caldo de verduras", "aceite de oliva"],
+      "porciones_base": 4,
+      "calorias_por_porcion": 180,
+      "tiempo_minutos": 40,
+      "etiquetas": ["vegana", "sin_gluten", "sin_lacteos"]
+    },
+    {
+      "id": "r018",
+      "nombre": "Pizza casera de muzzarella",
+      "ingredientes": ["harina", "levadura", "salsa de tomate", "queso mozzarella", "aceituna", "oregano"],
+      "porciones_base": 8,
+      "calorias_por_porcion": 290,
+      "tiempo_minutos": 120,
+      "etiquetas": ["contiene_lacteos", "contiene_gluten", "vegetariana"]
+    }
+  ]
+}

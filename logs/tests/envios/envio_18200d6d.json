@@ -1,0 +1,91 @@
+{
+  "envio_id": "18200d6d",
+  "destino": "Almacen del barrio (simulado)",
+  "cantidad_de_items": 11,
+  "archivo": "tests\\envios\\envio_18200d6d.json",
+  "enviado_en": "2026-10-02T13:07:31",
+  "aprobado_por": "carla",
+  "lista": {
+    "comensales": 6,
+    "cantidad_de_items": 11,
+    "items": [
+      {
+        "ingrediente": "aceite de oliva",
+        "se_usa_en": [
+          "Tortilla de papas"
+        ]
+      },
+      {
+        "ingrediente": "aceituna",
+        "se_usa_en": [
+          "Pizza casera de muzzarella"
+        ]
+      },
+      {
+        "ingrediente": "cebolla",
+        "se_usa_en": [
+          "Tortilla de papas"
+        ]
+      },
+      {
+        "ingrediente": "harina",
+        "se_usa_en": [
+          "Noquis de papa",
+          "Pizza casera de muzzarella"
+        ]
+      },
+      {
+        "ingrediente": "huevo",
+        "se_usa_en": [
+          "Noquis de papa",
+          "Tortilla de papas"
+        ]
+      },
+      {
+        "ingrediente": "levadura",
+        "se_usa_en": [
+          "Pizza casera de muzzarella"
+        ]
+      },
+      {
+        "ingrediente": "oregano",
+        "se_usa_en": [
+          "Pizza casera de muzzarella"
+        ]
+      },
+      {
+        "ingrediente": "papa",
+        "se_usa_en": [
+          "Noquis de papa",
+          "Tortilla de papas"
+        ]
+      },
+      {
+        "ingrediente": "queso mozzarella",
+        "se_usa_en": [
+          "Pizza casera de muzzarella"
+        ]
+      },
+      {
+        "ingrediente": "sal",
+        "se_usa_en": [
+          "Noquis de papa",
+          "Tortilla de papas"
+        ]
+      },
+      {
+        "ingrediente": "salsa de tomate",
+        "se_usa_en": [
+          "Noquis de papa",
+          "Pizza casera de muzzarella"
+        ]
+      }
+    ],
+    "factor_de_escala_por_receta": {
+      "Noquis de papa": 1.5,
+      "Tortilla de papas": 1.5,
+      "Pizza casera de muzzarella": 0.75
+    },
+    "inexistentes": []
+  }
+}

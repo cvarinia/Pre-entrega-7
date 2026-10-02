@@ -1,0 +1,24 @@
+# Dependencias de la pre-entrega 7 (probadas con Python 3.12)
+langgraph>=1.2,<2                 # incluye langgraph.prebuilt (create_react_agent)
+langchain-core>=1.6,<2
+pydantic>=2.7,<3
+python-dotenv>=1.0
+
+# PE7: API asincrona, Redis y checkpointer de LangGraph en Redis
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+redis>=5.2                        # cliente asincrono (redis.asyncio)
+langgraph-checkpoint-redis>=0.5,<1  # necesita Redis 8 o Redis Stack del lado del servidor
+httpx>=0.27                       # tests de la API y script de carga
+
+# PE7: observabilidad con Arize Phoenix (OpenTelemetry / OpenInference)
+arize-phoenix-otel>=0.17,<1
+openinference-instrumentation-langchain>=0.1.78,<0.2
+
+# Clientes de LLM: se elige con PROVEEDOR en el .env. Se pueden instalar ambos
+# o solo el que uses (las importaciones en comun/llm.py son perezosas).
+langchain-google-genai>=4.4,<5    # PROVEEDOR=gemini
+langchain-anthropic>=1.7,<2       # PROVEEDOR=anthropic
+
+# Para abrir la demo (demo.ipynb) en VS Code / Jupyter
+ipykernel>=6.29

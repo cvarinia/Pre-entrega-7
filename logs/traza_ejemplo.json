@@ -1,0 +1,394 @@
+{
+  "pedido": "Armame un menu de 3 cenas vegetarianas para 6 personas. Necesito la lista de compras consolidada y saber cuantas calorias come cada persona en total.",
+  "proveedor": "gemini",
+  "modelo": "gemini-3.6-flash",
+  "duracion_segundos": 130.3,
+  "task_completed": true,
+  "motivo_cierre": "Rubrica cumplida y chequeos automaticos OK.",
+  "recorrido": [
+    "investigador",
+    "analista",
+    "FINALIZAR"
+  ],
+  "decisiones_supervisor": [
+    {
+      "evaluacion": "Aun no hay una seleccion de recetas entregada por el investigador para cumplir con el pedido de cenas vegetarianas.",
+      "siguiente": "investigador",
+      "instruccion": "Buscar exactamente 3 recetas de cenas vegetarianas para 6 personas y entregar la seleccion de IDs correspondiente.",
+      "ronda": 1,
+      "forzada": false
+    },
+    {
+      "evaluacion": "La seleccion de 3 cenas vegetarianas del investigador es correcta, pero falta que el analista realice el procesamiento.",
+      "siguiente": "analista",
+      "instruccion": "Procesa las recetas seleccionadas ['r008', 'r009', 'r018'] (Ñoquis de papa, Tortilla de papas y Pizza casera de muzzarella) para 6 personas. Genera la lista de compras consolidada y calcula el total de calorias por persona.",
+      "ronda": 2,
+      "forzada": false
+    },
+    {
+      "evaluacion": "La seleccion de 3 cenas vegetarianas es correcta y el analista calculo las calorias por persona y la lista de compras requeridas para 6 personas sin fallas.",
+      "siguiente": "FINALIZAR",
+      "instruccion": "",
+      "ronda": 3,
+      "forzada": false
+    }
+  ],
+  "aportes": [
+    {
+      "agente": "investigador",
+      "ronda": 1,
+      "instruccion": "Buscar exactamente 3 recetas de cenas vegetarianas para 6 personas y entregar la seleccion de IDs correspondiente.",
+      "resumen": "Seleccioné los Ñoquis de papa (`r008`), la Tortilla de papas (`r009`) y la Pizza casera de muzzarella (`r018`), tres opciones vegetarianas ideales para la cena.",
+      "receta_ids": [
+        "r008",
+        "r009",
+        "r018"
+      ],
+      "evidencia": [
+        {
+          "herramienta": "buscar_recetas_por_etiqueta",
+          "argumentos": {
+            "etiqueta": "vegetariana"
+          },
+          "resultado": {
+            "cantidad": 7,
+            "recetas": [
+              {
+                "id": "r008",
+                "nombre": "Noquis de papa",
+                "ingredientes": [
+                  "papa",
+                  "harina",
+                  "huevo",
+                  "sal",
+                  "salsa de tomate"
+                ],
+                "porciones_base": 4,
+                "calorias_por_porcion": 450,
+                "tiempo_minutos": 80,
+                "etiquetas": [
+                  "contiene_gluten",
+                  "vegetariana",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r009",
+                "nombre": "Tortilla de papas",
+                "ingredientes": [
+                  "papa",
+                  "huevo",
+                  "cebolla",
+                  "aceite de oliva",
+                  "sal"
+                ],
+                "porciones_base": 4,
+                "calorias_por_porcion": 330,
+                "tiempo_minutos": 35,
+                "etiquetas": [
+                  "sin_gluten",
+                  "sin_lacteos",
+                  "vegetariana"
+                ]
+              },
+              {
+                "id": "r011",
+                "nombre": "Ensalada de quinoa y palta",
+                "ingredientes": [
+                  "quinoa",
+                  "tomate",
+                  "pepino",
+                  "palta",
+                  "limon",
+                  "aceite de oliva"
+                ],
+                "porciones_base": 2,
+                "calorias_por_porcion": 290,
+                "tiempo_minutos": 25,
+                "etiquetas": [
+                  "vegana",
+                  "sin_gluten",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r012",
+                "nombre": "Budin de zanahoria",
+                "ingredientes": [
+                  "zanahoria",
+                  "harina",
+                  "azucar",
+                  "huevo",
+                  "aceite",
+                  "nuez"
+                ],
+                "porciones_base": 8,
+                "calorias_por_porcion": 310,
+                "tiempo_minutos": 65,
+                "etiquetas": [
+                  "contiene_gluten",
+                  "vegetariana",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r016",
+                "nombre": "Flan casero con dulce de leche",
+                "ingredientes": [
+                  "huevo",
+                  "leche",
+                  "azucar",
+                  "esencia de vainilla",
+                  "dulce de leche"
+                ],
+                "porciones_base": 6,
+                "calorias_por_porcion": 250,
+                "tiempo_minutos": 90,
+                "etiquetas": [
+                  "contiene_lacteos",
+                  "sin_gluten",
+                  "vegetariana"
+                ]
+              },
+              {
+                "id": "r017",
+                "nombre": "Sopa de calabaza y jengibre",
+                "ingredientes": [
+                  "calabaza",
+                  "jengibre",
+                  "cebolla",
+                  "caldo de verduras",
+                  "aceite de oliva"
+                ],
+                "porciones_base": 4,
+                "calorias_por_porcion": 180,
+                "tiempo_minutos": 40,
+                "etiquetas": [
+                  "vegana",
+                  "sin_gluten",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r018",
+                "nombre": "Pizza casera de muzzarella",
+                "ingredientes": [
+                  "harina",
+                  "levadura",
+                  "salsa de tomate",
+                  "queso mozzarella",
+                  "aceituna",
+                  "oregano"
+                ],
+                "porciones_base": 8,
+                "calorias_por_porcion": 290,
+                "tiempo_minutos": 120,
+                "etiquetas": [
+                  "contiene_lacteos",
+                  "contiene_gluten",
+                  "vegetariana"
+                ]
+              }
+            ]
+          },
+          "error": null
+        },
+        {
+          "herramienta": "entregar_seleccion",
+          "argumentos": {
+            "justificacion": "Se seleccionaron 3 recetas vegetarianas adecuadas para cena (ñoquis de papa, tortilla de papas y pizza casera de muzzarella), descartando opciones dulces y postres.",
+            "receta_ids": [
+              "r008",
+              "r009",
+              "r018"
+            ]
+          },
+          "resultado": {
+            "aceptada": true,
+            "seleccion": [
+              {
+                "id": "r008",
+                "nombre": "Noquis de papa",
+                "etiquetas": [
+                  "contiene_gluten",
+                  "vegetariana",
+                  "sin_lacteos"
+                ]
+              },
+              {
+                "id": "r009",
+                "nombre": "Tortilla de papas",
+                "etiquetas": [
+                  "sin_gluten",
+                  "sin_lacteos",
+                  "vegetariana"
+                ]
+              },
+              {
+                "id": "r018",
+                "nombre": "Pizza casera de muzzarella",
+                "etiquetas": [
+                  "contiene_lacteos",
+                  "contiene_gluten",
+                  "vegetariana"
+                ]
+              }
+            ],
+            "justificacion": "Se seleccionaron 3 recetas vegetarianas adecuadas para cena (ñoquis de papa, tortilla de papas y pizza casera de muzzarella), descartando opciones dulces y postres."
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "agente": "analista",
+      "ronda": 2,
+      "instruccion": "Procesa las recetas seleccionadas ['r008', 'r009', 'r018'] (Ñoquis de papa, Tortilla de papas y Pizza casera de muzzarella) para 6 personas. Genera la lista de compras consolidada y calcula el total de calorias por persona.",
+      "resumen": "Acá tenés el procesamiento del menú para 6 personas con las recetas seleccionadas ('r008', 'r009' y 'r018'):\n\n### 📊 **Información Nutricional**\n* **Calorías totales del menú:** 6.420 kcal\n* **Calorías por persona:** 1.070 kcal\n  * **Ñoquis de papa:** 450 kcal por porción (factor de escala x1.5)\n  * **Tortilla de papas:** 330 kcal por porción (factor de escala x1.5)\n  * **Pizza casera de muzzarella:** 290 kcal por porción (factor de escala x0.75)\n\n---\n\n### 🛒 **Lista de Compras Consolidada (11 ingredientes)**\n* **Aceite de oliva:** Tortilla de papas\n* **Aceituna:** Pizza casera de muzzarella\n* **Cebolla:** Tortilla de papas\n* **Harina:** Ñoquis de papa, Pizza casera de muzzarella\n* **Huevo:** Ñoquis de papa, Tortilla de papas\n* **Levadura:** Pizza casera de muzzarella\n* **Orégano:** Pizza casera de muzzarella\n* **Papa:** Ñoquis de papa, Tortilla de papas\n* **Queso mozzarella:** Pizza casera de muzzarella\n* **Sal:** Ñoquis de papa, Tortilla de\n papas\n* **Salsa de tomate:** Ñoquis de papa, Pizza casera de muzzarella\n\n*(Recordá ajustar las cantidades según los factores de escala: x1.5 para Ñoquis y Tortilla, y x0.75 para la Pizza).*",
+      "receta_ids": [
+        "r008",
+        "r009",
+        "r018"
+      ],
+      "evidencia": [
+        {
+          "herramienta": "consolidar_lista_compras",
+          "argumentos": {
+            "receta_ids": [
+              "r008",
+              "r009",
+              "r018"
+            ],
+            "comensales": 6
+          },
+          "resultado": {
+            "comensales": 6,
+            "cantidad_de_items": 11,
+            "items": [
+              {
+                "ingrediente": "aceite de oliva",
+                "se_usa_en": [
+                  "Tortilla de papas"
+                ]
+              },
+              {
+                "ingrediente": "aceituna",
+                "se_usa_en": [
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "cebolla",
+                "se_usa_en": [
+                  "Tortilla de papas"
+                ]
+              },
+              {
+                "ingrediente": "harina",
+                "se_usa_en": [
+                  "Noquis de papa",
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "huevo",
+                "se_usa_en": [
+                  "Noquis de papa",
+                  "Tortilla de papas"
+                ]
+              },
+              {
+                "ingrediente": "levadura",
+                "se_usa_en": [
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "oregano",
+                "se_usa_en": [
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "papa",
+                "se_usa_en": [
+                  "Noquis de papa",
+                  "Tortilla de papas"
+                ]
+              },
+              {
+                "ingrediente": "queso mozzarella",
+                "se_usa_en": [
+                  "Pizza casera de muzzarella"
+                ]
+              },
+              {
+                "ingrediente": "sal",
+                "se_usa_en": [
+                  "Noquis de papa",
+                  "Tortilla de papas"
+                ]
+              },
+              {
+                "ingrediente": "salsa de tomate",
+                "se_usa_en": [
+                  "Noquis de papa",
+                  "Pizza casera de muzzarella"
+                ]
+              }
+            ],
+            "factor_de_escala_por_receta": {
+              "Noquis de papa": 1.5,
+              "Tortilla de papas": 1.5,
+              "Pizza casera de muzzarella": 0.75
+            },
+            "inexistentes": []
+          },
+          "error": null
+        },
+        {
+          "herramienta": "calcular_nutricion_menu",
+          "argumentos": {
+            "receta_ids": [
+              "r008",
+              "r009",
+              "r018"
+            ],
+            "comensales": 6
+          },
+          "resultado": {
+            "comensales": 6,
+            "detalle": [
+              {
+                "id": "r008",
+                "nombre": "Noquis de papa",
+                "calorias_por_porcion": 450,
+                "factor_de_escala": 1.5,
+                "calorias_para_el_grupo": 2700
+              },
+              {
+                "id": "r009",
+                "nombre": "Tortilla de papas",
+                "calorias_por_porcion": 330,
+                "factor_de_escala": 1.5,
+                "calorias_para_el_grupo": 1980
+              },
+              {
+                "id": "r018",
+                "nombre": "Pizza casera de muzzarella",
+                "calorias_por_porcion": 290,
+                "factor_de_escala": 0.75,
+                "calorias_para_el_grupo": 1740
+              }
+            ],
+            "calorias_totales_menu": 6420,
+            "calorias_por_comensal": 1070,
+            "advertencias": []
+          },
+          "error": null
+        }
+      ]
+    }
+  ],
+  "respuesta_final": "¡Buenas! Acá tenés la propuesta de menú para las 3 cenas vegetarianas de 6 personas, con la información nutricional y la lista de compras necesaria.\n\n### 1. Recetas elegidas\n* **Ñoquis de papa**\n* **Tortilla de papas**\n* **Pizza casera de muzzarella**\n\n---\n\n### 2. Calorías y números\nDetalle para 6 comensales:\n\n* **Ñoquis de papa:** 450 calorías por porción (2700 calorías para el grupo)\n* **Tortilla de papas:** 330 calorías por porción (1980 calorías para el grupo)\n* **Pizza casera de muzzarella:** 290 calorías por porción (1740 calorías para el grupo)\n\n* **Calorías totales del menú:** 6420 calorías\n* **Calorías totales por comensal:** 1070 calorías\n\n---\n\n### 3. Lista de compras consolidada\n\n**Factores de escala por receta:**\n* Ñoquis de papa: 1.5\n* Tortilla de papas: 1.5\n* Pizza casera de muzzarella: 0.75\n\n**Ingredientes (y en qué recetas se usan):**\n* **aceite de oliva:** Tortilla de papas\n* **aceituna:** Pizza casera de muzzarella\n* **cebolla:** Tortilla de papas\n* **harina:** Ñoquis de papa, Pizza casera de muzzarella\n* **huevo:** Ñoquis de papa, Tortilla de papas\n* **levadura:** Pizza casera de muzzarella\n* **oregano:** Pizza casera de muzzarella\n* **papa:** Ñoquis de papa, Tortilla de papas\n* **queso mozzarella:** Pizza casera de muzzarella\n* **sal:** Ñoquis de papa, Tortilla de papas\n* **salsa de tomate:** Ñoquis de papa, Pizza casera de muzzarella"
+}

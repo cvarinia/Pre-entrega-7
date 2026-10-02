@@ -1,0 +1,28 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	supervisor(supervisor)
+	investigador(investigador)
+	analista(analista)
+	aprobacion_envio(aprobacion_envio)
+	enviar_lista(enviar_lista)
+	sintesis(sintesis)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> supervisor;
+	analista --> supervisor;
+	aprobacion_envio -.-> enviar_lista;
+	aprobacion_envio -.-> sintesis;
+	enviar_lista --> sintesis;
+	investigador --> supervisor;
+	supervisor -.-> analista;
+	supervisor -.-> aprobacion_envio;
+	supervisor -.-> investigador;
+	supervisor -.-> sintesis;
+	sintesis --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
